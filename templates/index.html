@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Car Models</title>
+</head>
+<body>
+    <h1>Car Models</h1>
+    <ul>
+        {% for car_model, info in car_models.items() %}
+        <li>
+            <a href='{{ url_for('car_model_page', car_model=car_model) }}'>
+                {{ info['name'] }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
